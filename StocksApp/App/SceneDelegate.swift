@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let navigatonController = UINavigationController(rootViewController: ViewController())
+        let navigatonController = UINavigationController(rootViewController: SearchTableViewController())
         window.rootViewController = navigatonController
         self.window = window
 
