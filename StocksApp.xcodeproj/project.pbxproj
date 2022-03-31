@@ -17,6 +17,7 @@
 		457916E527F04A08008E4824 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 457916E427F04A08008E4824 /* Podfile */; };
 		457F62C627F240C900477B3B /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457F62C427F240C900477B3B /* SearchTableViewController.swift */; };
 		457F62C727F240C900477B3B /* SearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457F62C527F240C900477B3B /* SearchTableViewController.xib */; };
+		458B45AB27F6393100E2368B /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B45AA27F6393100E2368B /* SearchResults.swift */; };
 		45EBFC0127F4CF7800E1ED10 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EBFC0027F4CF7800E1ED10 /* ApiService.swift */; };
 		BC307A86BD89BACA3A7166BB /* Pods_StocksApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81A8D2EE83F865B96117609 /* Pods_StocksApp.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		457916E427F04A08008E4824 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		457F62C427F240C900477B3B /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		457F62C527F240C900477B3B /* SearchTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewController.xib; sourceTree = "<group>"; };
+		458B45AA27F6393100E2368B /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		45EBFC0027F4CF7800E1ED10 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		C81A8D2EE83F865B96117609 /* Pods_StocksApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StocksApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 		457916E327F0446A008E4824 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				458B45A927F6392000E2368B /* Models */,
 				457916D127F04081008E4824 /* ViewController.swift */,
 				455D1D8A27F3904D004606FA /* Search */,
 			);
@@ -135,6 +138,14 @@
 				457F62C527F240C900477B3B /* SearchTableViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		458B45A927F6392000E2368B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				458B45AA27F6393100E2368B /* SearchResults.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		45EBFBFF27F4CF5D00E1ED10 /* Services */ = {
@@ -283,6 +294,7 @@
 				457916CE27F04081008E4824 /* AppDelegate.swift in Sources */,
 				45EBFC0127F4CF7800E1ED10 /* ApiService.swift in Sources */,
 				457916D027F04081008E4824 /* SceneDelegate.swift in Sources */,
+				458B45AB27F6393100E2368B /* SearchResults.swift in Sources */,
 				457F62C627F240C900477B3B /* SearchTableViewController.swift in Sources */,
 				455D1D8E27F39080004606FA /* SearchTableViewCell.swift in Sources */,
 			);
