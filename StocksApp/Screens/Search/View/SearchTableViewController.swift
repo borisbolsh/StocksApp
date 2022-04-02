@@ -1,6 +1,10 @@
 import UIKit
+import Combine
 
 final class SearchTableViewController: UITableViewController {
+
+    private let apiService = ApiService()
+    private var subscribers = Set<AnyCancellable>()
 
     private lazy var searchController: UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
@@ -16,6 +20,8 @@ final class SearchTableViewController: UITableViewController {
         super.viewDidLoad()
         setupNavigationBar()
         tableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchTableViewCell")
+
+        testSearch()
     }
 
     private func setupNavigationBar() {
@@ -23,6 +29,19 @@ final class SearchTableViewController: UITableViewController {
         navigationItem.title = "Search"
     }
 
+    private func testSearch() {
+        apiService.fetchSymbolsPublisher(keywords: "AAA").sink { (complition) in
+            switch complition {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .finished:
+                break
+            }
+        } receiveValue: { (searchResults) in
+            print(searchResults)
+        }.store(in: &subscribers)
+
+    }
 }
 
 // MARK: - Table view data source
