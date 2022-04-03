@@ -9,6 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
         let navigatonController = UINavigationController(rootViewController: SearchTableViewController())
+        navigatonController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigatonController
         self.window = window
 
